@@ -374,12 +374,11 @@
           <div class="col-lg-8">
             <form action="https://api.staticforms.xyz/submit" method="post" id="staticform" class="email-form">
               <div class="row gy-4">
-                <!-- Replace with your StaticForms accessKey -->
                 <input type="hidden" name="accessKey" value="5773d032-fc10-478e-8e03-06106c6b4166">
                 <input type="hidden" name="email" value="miguelsguedes@gmail.com"> 
 
-                <!-- Replace with the url you want to redirect to -->
-                <!-- <input type="hidden" name="redirectTo" value="https://www.google.com"> -->
+                <!-- If we receive data in this field submission will be ignored -->
+                <input type="text" name="honeypot" style="display: none;">
 
                 <div class="col-md-6">
                   <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
@@ -396,48 +395,12 @@
                 <div class="col-md-12">
                   <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
                 </div>
-
                 <div class="col-md-12 text-center">
-                  <!-- <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div> -->
-
                   <button type="submit">Send Message</button>
                 </div>                
               </div>
             </form>
-            <!-- Check this out when implementing PHP ==> https://mailtrap.io/blog/html-form-send-email/ -->
-            <!-- <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form> -->
           </div>
-
         </div>
       </div>
     </section>
@@ -480,6 +443,30 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $("#staticform").submit(function(event) {
+      event.preventDefault(); // prevent redirection
+      $.ajax({
+        url: 'https://api.staticforms.xyz/submit', // url where to submit the request
+        type: "POST", // type of action POST || GET
+        dataType: 'json', // data type
+        data: $("#staticform").serialize(), // post data || get data
+        success: function(result) {
+          try {
+              alert("Thank you for Your message. I will contact you as soon as possible.")
+          } catch (e) {
+              console.log(e);
+              return false;
+          }
+        },
+        error: function(xhr, resp, text) {
+          alert("An error occured. Please try again.");
+        }
+      })
+    });
+  </script>
 
 </body>
 

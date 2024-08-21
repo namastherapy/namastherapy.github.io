@@ -103,23 +103,6 @@
   new PureCounter();
 
   /**
-   * Animate the skills items on reveal
-   */
-  /*let skillsAnimation = document.querySelectorAll('.skills-animation');
-  skillsAnimation.forEach((item) => {
-    new Waypoint({
-      element: item,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = item.querySelectorAll('.progress .progress-bar');
-        progress.forEach(el => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%';
-        });
-      }
-    });
-  });*/
-
-  /**
    * Initiate glightbox
    */
   const glightbox = GLightbox({
@@ -217,5 +200,27 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+
+  /*let contactForm = document.getElementById('staticform');
+  //console.log(contactForm[0]);
+
+  loginForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    $.ajax({
+      url: 'https://api.staticforms.xyz/submit', // url where to submit the request
+      type: "POST", // type of action POST || GET
+      dataType: 'json', // data type
+      data: $("#staticform").serialize(), // post data || get data
+      success: function(result) {
+        // you can see the result from the console
+        // tab of the developer tools
+        alert(JSON.parse(result));
+      },
+      error: function(xhr, resp, text) {
+        alert(xhr, resp, text);
+      }
+    })
+  });*/
+
 
 })();
