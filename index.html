@@ -377,28 +377,53 @@
               <div class="row gy-4">
                 <!-- Replace with your StaticForms accessKey -->
                 <input type="hidden" name="accessKey" value="5773d032-fc10-478e-8e03-06106c6b4166">
-                <input type="hidden" name="subject" value="Test from jsfiddle">
+                <!-- <input type="hidden" name="subject" value="Test from jsfiddle"> -->
                 <!-- Replace with the url you want to redirect to -->
-                <input type="hidden" name="redirectTo" value="https://www.google.com">
-                <div class="field">
+                <!-- <input type="hidden" name="redirectTo" value="https://www.google.com"> -->
+                <!-- <div class="field">
                   <label class="label">Name</label>
                   <div class="control">
                     <input class="input" type="text" name="name" placeholder="Enter Your Name" required>
                   </div>
-                </div>
-                <div class="field">
+                </div> -->
+                <!-- <div class="field">
                   <label class="label">Email</label>
                   <div class="control">
                     <input class="input" type="email" name="email" placeholder="Enter Your Email" required>
                   </div>
-                </div>
-                <div class="field">
+                </div> -->
+                <!-- <div class="field">
                   <label class="label">Message</label>
                   <div class="control">
                     <textarea class="textarea" name="message" placeholder="Enter Your Message" required></textarea>
                   </div>
+                </div> -->
+
+                <!-- <button class="button is-primary" type="Submit">Submit</button> -->
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
                 </div>
-                <button class="button is-primary" type="Submit">Submit</button>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>                
               </div>
             </form>
             <!-- <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
