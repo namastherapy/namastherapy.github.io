@@ -75,6 +75,9 @@ h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
+p {
+  text-align: justify;
+}
 
 
 /*--------------------------------------------------------------
@@ -418,6 +421,7 @@ section,
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
+  color: var(--accent-color);
 }
 
 .section-title h2:before {
@@ -431,6 +435,7 @@ section,
   right: 0;
   bottom: 1px;
   margin: auto;
+  color: var(--accent-color);
 }
 
 .section-title h2::after {
@@ -444,6 +449,7 @@ section,
   right: 0;
   bottom: 0;
   margin: auto;
+  color: var(--accent-color);
 }
 
 .section-title p {
@@ -620,6 +626,7 @@ section,
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+  text-align: center;
 }
 
 .services .service-item:hover {
@@ -697,6 +704,14 @@ section,
 .services .service-item.item-pink:hover .icon path {
   fill: #f3268c;
 }
+
+/*--------------------------------------------------------------
+# Hours Section
+--------------------------------------------------------------*/
+/* .hourstable td {
+  color: var(--accent-color);
+} */
+
 
 
 /*--------------------------------------------------------------
@@ -907,11 +922,4 @@ section,
   font-size: 20px;
   margin-right: 8px;
   color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
 }
