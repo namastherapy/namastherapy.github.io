@@ -496,11 +496,15 @@ section,
   margin: 0;
   font-size: 64px;
   font-weight: 700;
+  color: var(--accent-color);
+
 }
 
 .home p {
   margin: 5px 0 0 0;
   font-size: 26px;
+  color: var(--accent-color);
+  font-weight: 700;
 }
 
 .home p span {
@@ -515,7 +519,7 @@ section,
 .home .social-links a {
   font-size: 20px;
   display: inline-block;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--accent-color), transparent 0%);
   line-height: 1;
   margin-right: 20px;
   transition: 0.3s;
