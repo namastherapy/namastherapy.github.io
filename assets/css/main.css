@@ -673,6 +673,18 @@ section,
   fill: #20c997;
 }
 
+.services .service-item.item-yellow i {
+  color: #FFCD39;
+}
+
+.services .service-item.item-yellow:hover .icon i {
+  color: #fff;
+}
+
+.services .service-item.item-yellow:hover .icon path {
+  fill: #FFCD39;
+}
+
 .services .service-item.item-red i {
   color: #df1529;
 }
