@@ -53,6 +53,7 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+  /*margin-right: 50px;*/
 }
 
 a {
@@ -494,6 +495,7 @@ section,
 
 .home h2 {
   margin: 0;
+  margin-right: 50px;
   font-size: 64px;
   font-weight: 700;
   color: var(--accent-color);
@@ -552,6 +554,12 @@ section,
   padding: 0;
 }
 
+/* .about .content p {
+  margin-right: 50px;
+  margin-left: 20px;
+  text-align: justify;
+} */
+
 .about .content ul li {
   margin-bottom: 0px;
   display: flex;
@@ -573,7 +581,6 @@ section,
 # Training Section
 --------------------------------------------------------------*/
 .MembershipLogos img {
-
   height: 100px;
   float: left;
 }
@@ -721,6 +728,11 @@ section,
   fill: #f3268c;
 }
 
+.services .column-insurance {
+  float: left;
+  width: 50%;
+}
+
 /*--------------------------------------------------------------
 # Hours Section
 --------------------------------------------------------------*/
@@ -728,6 +740,15 @@ section,
   color: var(--accent-color);
 } */
 
+
+/*--------------------------------------------------------------
+# Additional info Section
+--------------------------------------------------------------*/
+/*.additionalInfo .content p {
+  margin-right: 50px;
+  margin-left: 20px;
+  text-align: justify;
+}*/
 
 
 /*--------------------------------------------------------------
